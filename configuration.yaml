@@ -2,6 +2,11 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
 zwave:
   # Forwarded from host/hypervisor
   # through Proxmox
@@ -20,13 +25,13 @@ tts:
 volkswagencarnet:
     username: !secret vw_carnet_user
     password: !secret vw_carnet_pass
-    scan_interval: 
+    scan_interval:
         minutes: 360
 
 # Apartment door
 verisure:
   username: !secret verisure_user
-  password: !secret versiure_pass
+  password: !secret verisure_pass
   locks: true
   code_digits: 6
   alarm: false
