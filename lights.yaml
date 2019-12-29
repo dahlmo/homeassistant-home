@@ -1,0 +1,6 @@
+  - platform: switch
+    name: Bordlampe lesekrok
+    entity_id: switch.power_plug_1
+  - platform: switch
+    name: Vegglys spisestue
+    entity_id: switch.power_plug_2
