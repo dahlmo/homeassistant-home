@@ -27,7 +27,7 @@ volkswagencarnet:
     password: !secret vw_carnet_pass
     scan_interval:
         minutes: 2
-    vehicles: !include vw_vins.yaml
+    name: !include vw_vins.yaml
 
 
 # Apartment door
