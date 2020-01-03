@@ -50,3 +50,11 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 light: !include lights.yaml
 
+shopping_list:
+
+device_tracker:
+  - platform: mqtt
+    devices:
+      mxh8: 'monitor/rpidashboard/mxh8/device_tracker'
+      dahlmo: 'monitor/rpidashboard/dahlmo/device_tracker'
+      living_room_tv: 'monitor/rpidashboard/samsungtv/device_tracker'
