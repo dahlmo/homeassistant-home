@@ -1,0 +1,339 @@
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "module",
+                    "url": "/community_plugls .in/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
+                }
+            ],
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "binary_sensor.verisure_ethernet_status"
+                        },
+                        {
+                            "entity": "sensor.hoveddimmer"
+                        },
+                        {
+                            "entity": "sensor.tradfri_7e23555204400041_65551"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "sensor.huaweien"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "calibration_points": [
+                                {
+                                    "map": {
+                                        "x": 140,
+                                        "y": 740
+                                    },
+                                    "vacuum": {
+                                        "x": 25500,
+                                        "y": 25500
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 952,
+                                        "y": 692
+                                    },
+                                    "vacuum": {
+                                        "x": 32900,
+                                        "y": 25900
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 565,
+                                        "y": 358
+                                    },
+                                    "vacuum": {
+                                        "x": 29500,
+                                        "y": 28900
+                                    }
+                                }
+                            ],
+                            "debug": false,
+                            "default_mode": "predefined_zones",
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "map_image": "/community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi.png",
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "zones": [
+                                [
+                                    [
+                                        31089,
+                                        27595,
+                                        34575,
+                                        29444,
+                                        1
+                                    ]
+                                ],
+                                [
+                                    [
+                                        33020,
+                                        29422,
+                                        35688,
+                                        31921,
+                                        1
+                                    ]
+                                ],
+                                [
+                                    [
+                                        26704,
+                                        25906,
+                                        28992,
+                                        26943,
+                                        1
+                                    ]
+                                ]
+                            ]
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.bordlampe_lesekrok",
+                                "light.vegglys_spisestue",
+                                "light.veggbelysning_h",
+                                "light.stuebord",
+                                "light.spisestue",
+                                "light.veggbelysning_v",
+                                "light.lesekrok"
+                            ],
+                            "title": "Lys",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "lock.leilighetsdor"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "L\u00e5s",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "switch.power_plug_2",
+                                "switch.power_plug_1"
+                            ],
+                            "title": "Bryter",
+                            "type": "entities"
+                        },
+                        {
+                            "artwork": "cover",
+                            "entity": "media_player.stue",
+                            "hide": {
+                                "icon": true,
+                                "power": true,
+                                "source": false
+                            },
+                            "speaker_group": {
+                                "entities": [
+                                    {
+                                        "entity_id": "media_player.kjokken",
+                                        "name": "Kj\u00f8kken"
+                                    },
+                                    {
+                                        "entity_id": "media_player.baderom",
+                                        "name": "Baderom"
+                                    },
+                                    {
+                                        "entity_id": "media_player.spisestue",
+                                        "name": "Spisestue"
+                                    }
+                                ],
+                                "expanded": true,
+                                "platform": "sonos",
+                                "show_group_count": true
+                            },
+                            "type": "custom:mini-media-player"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "media_player.stue",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": true,
+                                        "icon": true,
+                                        "power": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                },
+                                {
+                                    "entity": "media_player.spisestue",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": true,
+                                        "icon": true,
+                                        "power": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                },
+                                {
+                                    "entity": "media_player.baderom",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": true,
+                                        "icon": true,
+                                        "power": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                },
+                                {
+                                    "entity": "media_player.kjokken",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": true,
+                                        "icon": true,
+                                        "power": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "weather.home",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "zwave.aeon_labs_zw090_z_stick_gen5_eu"
+                                },
+                                {
+                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a"
+                                },
+                                {
+                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a_2"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_system_fgsd002_smoke_sensor_smoke"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Z-Wave",
+                            "type": "entities"
+                        },
+                        {
+                            "dark_mode": false,
+                            "default_zoom": 16,
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.e_golf"
+                                }
+                            ],
+                            "title": "E-Golf lokasjon",
+                            "type": "map"
+                        },
+                        {
+                            "title": "Handleliste",
+                            "type": "shopping-list"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.e_golf_climatisation_without_external_power"
+                                },
+                                {
+                                    "entity": "binary_sensor.e_golf_external_power"
+                                },
+                                {
+                                    "entity": "binary_sensor.e_golf_parking_light"
+                                },
+                                {
+                                    "entity": "lock.e_golf_door_locked"
+                                },
+                                {
+                                    "entity": "lock.e_golf_trunk_locked"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_charger_max_ampere"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_charging_time_left"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_electric_range"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_service_inspection"
+                                },
+                                {
+                                    "entity": "switch.e_golf_charging"
+                                },
+                                {
+                                    "entity": "switch.e_golf_climatisation"
+                                },
+                                {
+                                    "entity": "switch.e_golf_window_heater"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_last_connected"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        },
+                        {
+                            "dark_mode": false,
+                            "default_zoom": 16,
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.e_golf"
+                                }
+                            ],
+                            "title": "E-Golf parkering",
+                            "type": "map"
+                        }
+                    ],
+                    "icon": "mdi:car",
+                    "path": "e-golf",
+                    "title": "\ud83d\ude99E-Golf"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

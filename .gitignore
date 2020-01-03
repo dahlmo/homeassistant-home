@@ -6,9 +6,11 @@
 !*.yaml
 !.gitignore
 !*.md
+!/img/
+!/img/*.png
+!/.storage/lovelace
 
 # Ignore folders.
-.storage
 .cloud
 .google.token
 
