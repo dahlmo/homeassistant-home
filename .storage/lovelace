@@ -4,7 +4,7 @@
             "resources": [
                 {
                     "type": "module",
-                    "url": "/community_plugls .in/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
+                    "url": "/community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
                 },
                 {
                     "type": "module",
@@ -16,22 +16,11 @@
                 {
                     "badges": [
                         {
-                            "entity": "binary_sensor.updater"
-                        },
-                        {
-                            "entity": "binary_sensor.verisure_ethernet_status"
-                        },
-                        {
-                            "entity": "sensor.hoveddimmer"
-                        },
-                        {
-                            "entity": "sensor.tradfri_7e23555204400041_65551"
+                            "entity": "person.dahlmo",
+                            "name": "Dahlmo"
                         },
                         {
                             "entity": "sun.sun"
-                        },
-                        {
-                            "entity": "sensor.huaweien"
                         }
                     ],
                     "cards": [
@@ -105,14 +94,6 @@
                         },
                         {
                             "entities": [
-                                {
-                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
-                                }
-                            ],
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
                                 "light.bordlampe_lesekrok",
                                 "light.vegglys_spisestue",
                                 "light.veggbelysning_h",
@@ -122,22 +103,6 @@
                                 "light.lesekrok"
                             ],
                             "title": "Lys",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "lock.leilighetsdor"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "L\u00e5s",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "switch.power_plug_2",
-                                "switch.power_plug_1"
-                            ],
-                            "title": "Bryter",
                             "type": "entities"
                         },
                         {
@@ -168,6 +133,22 @@
                                 "show_group_count": true
                             },
                             "type": "custom:mini-media-player"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "lock.leilighetsdor"
+                                },
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                    "name": "Vaskerobot"
+                                },
+                                {
+                                    "entity": "sensor.tv_hours",
+                                    "name": "TV-timer i dag"
+                                }
+                            ],
+                            "type": "entities"
                         },
                         {
                             "entities": [
@@ -227,25 +208,6 @@
                             "type": "weather-forecast"
                         },
                         {
-                            "entities": [
-                                {
-                                    "entity": "zwave.aeon_labs_zw090_z_stick_gen5_eu"
-                                },
-                                {
-                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a"
-                                },
-                                {
-                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a_2"
-                                },
-                                {
-                                    "entity": "sensor.fibaro_system_fgsd002_smoke_sensor_smoke"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Z-Wave",
-                            "type": "entities"
-                        },
-                        {
                             "dark_mode": false,
                             "default_zoom": 16,
                             "entities": [
@@ -253,14 +215,45 @@
                                     "entity": "device_tracker.e_golf"
                                 }
                             ],
+                            "geo_location_sources": [],
                             "title": "E-Golf lokasjon",
                             "type": "map"
                         },
                         {
                             "title": "Handleliste",
                             "type": "shopping-list"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.verisure_ethernet_status",
+                                    "name": "Verisure tilkoblet",
+                                    "state_filter": [
+                                        "off"
+                                    ]
+                                },
+                                {
+                                    "entity": "sensor.hacs",
+                                    "name": "HACS-oppdateringer tilgj.",
+                                    "state_filter": [
+                                        {
+                                            "operator": ">=",
+                                            "value": 1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "state_filter": [
+                                "off",
+                                {
+                                    "operator": ">=",
+                                    "value": 1
+                                }
+                            ],
+                            "type": "entity-filter"
                         }
                     ],
+                    "icon": "mdi:home",
                     "path": "default_view",
                     "title": "Home"
                 },
@@ -330,6 +323,50 @@
                     "icon": "mdi:car",
                     "path": "e-golf",
                     "title": "\ud83d\ude99E-Golf"
+                },
+                {
+                    "badges": [
+                        {
+                            "entity": "person.dahlmo",
+                            "name": "Dahlmo"
+                        },
+                        {
+                            "entity": "device_tracker.mxh8"
+                        },
+                        {
+                            "entity": "device_tracker.living_room_tv"
+                        },
+                        {
+                            "entity": "device_tracker.dahlmo"
+                        },
+                        {
+                            "entity": "sensor.tv_hours"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "zwave.aeon_labs_zw090_z_stick_gen5_eu"
+                                },
+                                {
+                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a"
+                                },
+                                {
+                                    "entity": "zwave.shenzhen_neo_electronics_co_ltd_power_plug_12a_2"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_system_fgsd002_smoke_sensor_smoke"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Z-Wave",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:wrench",
+                    "path": "beta",
+                    "title": "BETA"
                 }
             ]
         }
