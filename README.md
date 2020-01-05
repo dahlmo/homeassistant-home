@@ -3,7 +3,7 @@
 Where I back up and document my HA setup at home 🏠⚡️  
 I've recently moved to Hass.io, and I run it as a VM through Proxmox.  
 
-![Screenshot of the main page](https://raw.githubusercontent.com/dahlmo/homeassistant-home/master/img/screenshot1.png)  
+![Screenshot of the main page](https://raw.githubusercontent.com/dahlmo/homeassistant-home/master/img/screenshot2.png)  
 
 ## Hardware used to run HA 
 🖲 Intel NUC NUC6CAYH w/4GB RAM and 120GB SSD  
