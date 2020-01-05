@@ -11,18 +11,10 @@
                     "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
                 }
             ],
-            "title": "Home",
+            "title": "Hjemme",
             "views": [
                 {
-                    "badges": [
-                        {
-                            "entity": "person.dahlmo",
-                            "name": "Dahlmo"
-                        },
-                        {
-                            "entity": "sun.sun"
-                        }
-                    ],
+                    "badges": [],
                     "cards": [
                         {
                             "calibration_points": [
@@ -224,6 +216,10 @@
                             "type": "shopping-list"
                         },
                         {
+                            "card": {
+                                "show_header_toggle": false,
+                                "title": "Obs \ud83d\udca1"
+                            },
                             "entities": [
                                 {
                                     "entity": "binary_sensor.verisure_ethernet_status",
@@ -241,8 +237,19 @@
                                             "value": 1
                                         }
                                     ]
+                                },
+                                {
+                                    "entity": "sensor.e_golf_battery_level",
+                                    "name": "E-golf batteriniv\u00e5",
+                                    "state_filter": [
+                                        {
+                                            "operator": "<=",
+                                            "value": 70
+                                        }
+                                    ]
                                 }
                             ],
+                            "show_empty": false,
                             "state_filter": [
                                 "off",
                                 {
