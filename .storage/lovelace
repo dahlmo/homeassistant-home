@@ -86,13 +86,30 @@
                         },
                         {
                             "entities": [
-                                "light.bordlampe_lesekrok",
-                                "light.vegglys_spisestue",
-                                "light.veggbelysning_h",
-                                "light.stuebord",
-                                "light.spisestue",
-                                "light.veggbelysning_v",
-                                "light.lesekrok"
+                                {
+                                    "entity": "light.bordlampe_lesekrok"
+                                },
+                                {
+                                    "entity": "light.vegglys_spisestue"
+                                },
+                                {
+                                    "entity": "light.veggbelysning_h"
+                                },
+                                {
+                                    "entity": "light.stuebord"
+                                },
+                                {
+                                    "entity": "light.spisestue"
+                                },
+                                {
+                                    "entity": "light.veggbelysning_v"
+                                },
+                                {
+                                    "entity": "light.lesekrok"
+                                },
+                                {
+                                    "entity": "binary_sensor.light_kitchen_bench_top"
+                                }
                             ],
                             "title": "Lys",
                             "type": "entities"
@@ -128,6 +145,9 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entity": "person.dahlmo"
+                                },
                                 {
                                     "entity": "lock.leilighetsdor"
                                 },
@@ -310,6 +330,9 @@
                                 },
                                 {
                                     "entity": "sensor.e_golf_last_connected"
+                                },
+                                {
+                                    "entity": "sensor.e_golf_odometer"
                                 }
                             ],
                             "show_header_toggle": false,
