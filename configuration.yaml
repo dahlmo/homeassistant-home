@@ -1,6 +1,10 @@
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
+ios:
+
+logger:
+   default: critical
 
 http:
   base_url: !secret base_url
@@ -49,6 +53,21 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 light: !include lights.yaml
+sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
+
+zone:
+  - name: SATS
+    latitude: 59.928519
+    longitude: 10.710931
+    radius: 80
+    icon: mdi:weight-lifter
+
+  - name: Tise
+    latitude: 59.910041
+    longitude: 10.740917
+    radius: 80
+    icon: mdi:worker
 
 shopping_list:
 

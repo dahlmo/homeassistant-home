@@ -1,0 +1,11 @@
+  - platform: template
+    sensors:
+      light_kitchen_bench_top:
+        friendly_name: "Spotter kjøkkenbenk"
+        value_template: "{{ not is_state('media_player.kjokken', 'unavailable') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.light_kitchen_bench_top", "on") %}
+            mdi:lightbulb-group
+          {% else %}
+            mdi:lightbulb-group
+          {% endif %}
