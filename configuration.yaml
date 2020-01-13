@@ -60,7 +60,7 @@ zone:
   - name: SATS
     latitude: 59.928519
     longitude: 10.710931
-    radius: 80
+    radius: 60
     icon: mdi:weight-lifter
 
   - name: Tise
