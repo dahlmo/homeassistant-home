@@ -12,3 +12,27 @@
     type: count
     start: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - now().weekday() * 86400 }}'
     end: '{{ now() }}'
+  - platform: template
+    sensors:
+      vacuum_cleaned_area:
+        friendly_name: "Cleaned area"
+        unit_of_measurement: 'm2'
+        value_template: "{{ state_attr('vacuum.xiaomi_vacuum_cleaner', 'cleaned_area') }}"
+      sun_elevation:
+        friendly_name: "Solposisjon"
+        unit_of_measurement: 'm'
+        value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+      sun_azimuth:
+        friendly_name: "Solazimut"
+        unit_of_measurement: 'Az'
+        value_template: "{{ state_attr('sun.sun', 'azimuth') }}"
+      electricity_price_level:
+        friendly_name: "Prisnivå strøm"
+        value_template: "{{ state_attr('sensor.electricity_price_home', 'price_level') }}"
+  - platform: yr
+    name: Vær
+    forecast: 12
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
