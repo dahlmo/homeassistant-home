@@ -4,3 +4,10 @@
   - platform: switch
     name: Vegglys spisestue
     entity_id: switch.power_plug_2
+  - platform: group
+    name: Spotter stue
+    entities:
+      - light.stuebord
+      - light.lesekrok
+      - light.veggbelysning_h
+      - light.veggbelysning_v
