@@ -17,6 +17,7 @@ I've recently moved to Hass.io, and I run it as a VM through Proxmox.
 ## Integrations 
 🧹 [Xiaomi Roborock S55 Vacuum](https://www.home-assistant.io/integrations/vacuum.xiaomi_miio/) keeps the floors clean  
 💡 [IKEA Trådfri](https://www.home-assistant.io/integrations/tradfri) controls the ceiling lights in living- and dining room  
+🌅 [IKEA Fyrtur](https://www.home-assistant.io/integrations/tradfri) controls bedroom blinds
 🚨 [Verisure](https://www.home-assistant.io/integrations/verisure) allows controlling the locks of the apt. door  
 🏡 [HACS](https://github.com/hacs/integration) enables easier installation of custom components  
 🔴 [Node Red](https://nodered.org/) gives opportunity of defining automations as visualized flows  
@@ -32,6 +33,7 @@ I've recently moved to Hass.io, and I run it as a VM through Proxmox.
 ## 🗺 Roadmap
 ~~– MQTT to relay Bluetooth from Rpi3~~  
 – ESP8266 to control apartment complex intercom  
+– (Re-add) LG SmartThinQ custom component for washer+dryer  
 
 ## Some things to note
 Some files are gitignored on purpose, for example secrets.yaml (obviously) and vw_vins.yaml.  
