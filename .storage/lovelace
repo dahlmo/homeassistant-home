@@ -1,117 +1,123 @@
 {
     "data": {
         "config": {
-            "resources": [
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
-                }
-            ],
             "title": "Hjemme",
             "views": [
                 {
                     "badges": [],
                     "cards": [
                         {
-                            "calibration_points": [
+                            "entities": [
                                 {
-                                    "map": {
-                                        "x": 140,
-                                        "y": 740
-                                    },
-                                    "vacuum": {
-                                        "x": 25500,
-                                        "y": 25500
-                                    }
+                                    "entity": "light.bordlampe_lesekrok",
+                                    "name": "Lesekrok"
                                 },
                                 {
-                                    "map": {
-                                        "x": 952,
-                                        "y": 692
-                                    },
-                                    "vacuum": {
-                                        "x": 32900,
-                                        "y": 25900
-                                    }
+                                    "entity": "light.spotter_stue",
+                                    "name": "Takspotter"
                                 },
                                 {
-                                    "map": {
-                                        "x": 565,
-                                        "y": 358
+                                    "entity": "media_player.stue",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": false,
+                                        "icon": true,
+                                        "name": true,
+                                        "power": true,
+                                        "progress": true,
+                                        "source": false,
+                                        "volume": false
                                     },
-                                    "vacuum": {
-                                        "x": 29500,
-                                        "y": 28900
-                                    }
+                                    "type": "custom:mini-media-player"
                                 }
                             ],
-                            "debug": false,
-                            "default_mode": "predefined_zones",
-                            "entity": "vacuum.xiaomi_vacuum_cleaner",
-                            "map_image": "/community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi.png",
-                            "type": "custom:xiaomi-vacuum-map-card",
-                            "zones": [
-                                [
-                                    [
-                                        31089,
-                                        27595,
-                                        34575,
-                                        29444,
-                                        1
-                                    ]
-                                ],
-                                [
-                                    [
-                                        33020,
-                                        29422,
-                                        35688,
-                                        31921,
-                                        1
-                                    ]
-                                ],
-                                [
-                                    [
-                                        26704,
-                                        25906,
-                                        28992,
-                                        26943,
-                                        1
-                                    ]
-                                ]
-                            ]
+                            "icon": "mdi:sofa",
+                            "title": "Stue",
+                            "type": "entities"
                         },
                         {
                             "entities": [
                                 {
-                                    "entity": "light.bordlampe_lesekrok"
-                                },
-                                {
                                     "entity": "light.vegglys_spisestue"
-                                },
-                                {
-                                    "entity": "light.veggbelysning_h"
-                                },
-                                {
-                                    "entity": "light.stuebord"
                                 },
                                 {
                                     "entity": "light.spisestue"
                                 },
                                 {
-                                    "entity": "light.veggbelysning_v"
-                                },
-                                {
-                                    "entity": "light.lesekrok"
-                                },
-                                {
-                                    "entity": "binary_sensor.light_kitchen_bench_top"
+                                    "entity": "media_player.spisestue",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": false,
+                                        "icon": true,
+                                        "name": true,
+                                        "power": true,
+                                        "progress": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
                                 }
                             ],
-                            "title": "Lys",
+                            "icon": "mdi:silverware-fork-knife",
+                            "title": "Spisestue",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bathroom_ceiling",
+                                    "name": "Downlights"
+                                },
+                                {
+                                    "control": true,
+                                    "entity": "climate.thermofloor_as_heatit_thermostat_tf_056_mode",
+                                    "icon": "mdi:radiator",
+                                    "name": "Varmekabler"
+                                },
+                                {
+                                    "entity": "media_player.baderom",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": false,
+                                        "icon": true,
+                                        "name": true,
+                                        "power": true,
+                                        "progress": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                }
+                            ],
+                            "icon": "mdi:shower",
+                            "state_color": true,
+                            "title": "Baderom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.light_kitchen_bench_top"
+                                },
+                                {
+                                    "entity": "media_player.kjokken",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": false,
+                                        "icon": true,
+                                        "name": true,
+                                        "power": true,
+                                        "progress": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                }
+                            ],
+                            "icon": "mdi:knife",
+                            "show_header_toggle": false,
+                            "state_color": true,
+                            "title": "Kj\u00f8kken",
                             "type": "entities"
                         },
                         {
@@ -149,6 +155,9 @@
                                     "entity": "person.dahlmo"
                                 },
                                 {
+                                    "entity": "person.girlfriend"
+                                },
+                                {
                                     "entity": "lock.leilighetsdor"
                                 },
                                 {
@@ -156,84 +165,42 @@
                                     "name": "Vaskerobot"
                                 },
                                 {
-                                    "entity": "sensor.tv_hours",
-                                    "name": "TV-timer i dag"
+                                    "entity": "sensor.electricity_price_home",
+                                    "name": "Str\u00f8mpris n\u00e5"
+                                },
+                                {
+                                    "entity": "sensor.electricity_price_level",
+                                    "name": "Prisniv\u00e5 str\u00f8m"
                                 }
                             ],
                             "type": "entities"
                         },
                         {
+                            "entity": "sensor.real_time_consumption_home",
+                            "max": 3600,
+                            "min": 0,
+                            "name": "Str\u00f8mforbruk sanntid",
+                            "severity": {
+                                "green": 200,
+                                "red": 2500,
+                                "yellow": 700
+                            },
+                            "type": "gauge"
+                        },
+                        {
                             "entities": [
                                 {
-                                    "entity": "media_player.stue",
-                                    "group": true,
-                                    "hide": {
-                                        "controls": true,
-                                        "icon": true,
-                                        "power": true,
-                                        "source": true,
-                                        "volume": false
-                                    },
-                                    "type": "custom:mini-media-player"
-                                },
-                                {
-                                    "entity": "media_player.spisestue",
-                                    "group": true,
-                                    "hide": {
-                                        "controls": true,
-                                        "icon": true,
-                                        "power": true,
-                                        "source": true,
-                                        "volume": false
-                                    },
-                                    "type": "custom:mini-media-player"
-                                },
-                                {
-                                    "entity": "media_player.baderom",
-                                    "group": true,
-                                    "hide": {
-                                        "controls": true,
-                                        "icon": true,
-                                        "power": true,
-                                        "source": true,
-                                        "volume": false
-                                    },
-                                    "type": "custom:mini-media-player"
-                                },
-                                {
-                                    "entity": "media_player.kjokken",
-                                    "group": true,
-                                    "hide": {
-                                        "controls": true,
-                                        "icon": true,
-                                        "power": true,
-                                        "source": true,
-                                        "volume": false
-                                    },
-                                    "type": "custom:mini-media-player"
+                                    "entity": "cover.tradfri_blind",
+                                    "name": "Rullegardin"
                                 }
                             ],
+                            "icon": "mdi:sleep",
+                            "title": "Soverom",
                             "type": "entities"
                         },
                         {
                             "entity": "weather.home",
                             "type": "weather-forecast"
-                        },
-                        {
-                            "dark_mode": false,
-                            "default_zoom": 16,
-                            "entities": [
-                                {
-                                    "entity": "device_tracker.e_golf"
-                                }
-                            ],
-                            "geo_location_sources": [],
-                            "title": "E-Golf lokasjon",
-                            "type": "map"
-                        },
-                        {
-                            "title": "Handleliste",
-                            "type": "shopping-list"
                         },
                         {
                             "card": {
@@ -278,6 +245,19 @@
                                 }
                             ],
                             "type": "entity-filter"
+                        },
+                        {
+                            "dark_mode": false,
+                            "default_zoom": 16,
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.e_golf"
+                                }
+                            ],
+                            "geo_location_sources": [],
+                            "hours_to_show": 24,
+                            "title": "E-Golf lokasjon",
+                            "type": "map"
                         }
                     ],
                     "icon": "mdi:home",
@@ -336,6 +316,7 @@
                                 }
                             ],
                             "show_header_toggle": false,
+                            "state_color": true,
                             "type": "entities"
                         },
                         {
@@ -346,6 +327,7 @@
                                     "entity": "device_tracker.e_golf"
                                 }
                             ],
+                            "hours_to_show": 24,
                             "title": "E-Golf parkering",
                             "type": "map"
                         }
@@ -387,16 +369,169 @@
                                 },
                                 {
                                     "entity": "sensor.fibaro_system_fgsd002_smoke_sensor_smoke"
+                                },
+                                {
+                                    "entity": "sensor.total_steps"
+                                },
+                                {
+                                    "entity": "climate.thermofloor_as_heatit_thermostat_tf_056_mode",
+                                    "name": "Varmekabler"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_heating_kw"
                                 }
                             ],
                             "show_header_toggle": false,
                             "title": "Z-Wave",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.norway_coronavirus_confirmed",
+                                    "name": "Smittet"
+                                },
+                                {
+                                    "entity": "sensor.norway_coronavirus_deaths",
+                                    "name": "D\u00f8de"
+                                },
+                                {
+                                    "entity": "sensor.norway_coronavirus_recovered",
+                                    "name": "Friske igjen"
+                                }
+                            ],
+                            "title": "Corona i Norge",
+                            "type": "glance"
+                        },
+                        {
+                            "calibration_points": [
+                                {
+                                    "map": {
+                                        "x": 140,
+                                        "y": 740
+                                    },
+                                    "vacuum": {
+                                        "x": 25500,
+                                        "y": 25500
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 952,
+                                        "y": 692
+                                    },
+                                    "vacuum": {
+                                        "x": 32900,
+                                        "y": 25900
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 565,
+                                        "y": 358
+                                    },
+                                    "vacuum": {
+                                        "x": 29500,
+                                        "y": 28900
+                                    }
+                                }
+                            ],
+                            "debug": false,
+                            "default_mode": "predefined_zones",
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "map_image": "/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi.png",
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "zones": [
+                                [
+                                    [
+                                        31089,
+                                        27595,
+                                        34575,
+                                        29444,
+                                        1
+                                    ]
+                                ],
+                                [
+                                    [
+                                        33020,
+                                        29422,
+                                        35688,
+                                        31921,
+                                        1
+                                    ]
+                                ],
+                                [
+                                    [
+                                        26704,
+                                        25906,
+                                        28992,
+                                        26943,
+                                        1
+                                    ]
+                                ]
+                            ]
                         }
                     ],
                     "icon": "mdi:wrench",
                     "path": "beta",
                     "title": "BETA"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "title": "Handleliste",
+                            "type": "shopping-list"
+                        }
+                    ],
+                    "icon": "mdi:clipboard-list",
+                    "title": ""
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bathroom_ceiling",
+                                    "name": "Takspotter"
+                                },
+                                {
+                                    "control": true,
+                                    "entity": "climate.thermofloor_as_heatit_thermostat_tf_056_mode",
+                                    "icon": "mdi:shower",
+                                    "name": false,
+                                    "step_layout": "column",
+                                    "type": "custom:simple-thermostat"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_heating_kw",
+                                    "name": "Varmekabler kWh (mnd.)"
+                                },
+                                {
+                                    "entity": "media_player.baderom",
+                                    "group": true,
+                                    "hide": {
+                                        "controls": false,
+                                        "icon": true,
+                                        "name": true,
+                                        "power": true,
+                                        "progress": true,
+                                        "source": true,
+                                        "volume": false
+                                    },
+                                    "type": "custom:mini-media-player"
+                                }
+                            ],
+                            "icon": "mdi:shower",
+                            "state_color": true,
+                            "title": "Baderom",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:shower",
+                    "path": "bathroom",
+                    "title": "Baderom"
                 }
             ]
         }
