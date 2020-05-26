@@ -30,7 +30,7 @@ volkswagencarnet:
     username: !secret vw_carnet_user
     password: !secret vw_carnet_pass
     scan_interval:
-        minutes: 2
+        minutes: 3
     name: !include vw_vins.yaml
 
 
@@ -48,6 +48,15 @@ vacuum:
     host: 10.1.1.40
     token: !secret xiaomi_roborock_token
 
+# Testing utility meter
+utility_meter:
+  bathroom_heating_kw:
+    source: sensor.thermofloor_as_heatit_thermostat_tf_056_energy
+    cycle: monthly
+
+tibber:
+  access_token: !secret tibber_token
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -62,12 +71,22 @@ zone:
     longitude: 10.710931
     radius: 60
     icon: mdi:weight-lifter
-
   - name: Tise
     latitude: 59.910041
     longitude: 10.740917
     radius: 80
     icon: mdi:worker
+  - name: Rikshospitalet
+    latitude: 59.949143
+    longitude: 10.715010
+    radius: 160
+    icon: mdi:hospital
+  - name: Majorstuen T
+    latitude: 59.929852
+    longitude: 10.715197
+    radius: 80
+    icon: mdi:subway-variant
+
 
 shopping_list:
 
