@@ -29,6 +29,18 @@
       electricity_price_level:
         friendly_name: "Prisnivå strøm"
         value_template: "{{ state_attr('sensor.electricity_price_home', 'price_level') }}"
+      washer_program:
+        friendly_name: "Vaskeprogram"
+        value_template: "{{ state_attr('sensor.washer', 'current_course') }}"
+      washer_temp:
+        friendly_name: "Vasketemperatur"
+        value_template: "{{ state_attr('sensor.washer', 'watertemp_option_state') }}"
+      washer_state:
+        friendly_name: "Vaskemaskinstatus"
+        value_template: "{{ state_attr('sensor.washer', 'run_state') }}"
+      washer_remain_time:
+        friendly_name: "Gjenværende vasketid"
+        value_template: "{{ state_attr('sensor.washer', 'remain_time') }}"
   - platform: yr
     name: Vær
     forecast: 12
