@@ -1,11 +1,12 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 ios:
 
 logger:
    default: critical
-
+   logs:
+     custom_components.smartthinq: debug
+     homeassistant.components.mqtt: debug
 http:
   base_url: !secret base_url
   ssl_certificate: /ssl/fullchain.pem
@@ -15,6 +16,7 @@ zwave:
   # Forwarded from host/hypervisor
   # through Proxmox
   usb_path: /dev/ttyACM0
+  # network_key: !secret zwave_network_key
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
@@ -69,7 +71,7 @@ zone:
   - name: SATS
     latitude: 59.928519
     longitude: 10.710931
-    radius: 60
+    radius: 40
     icon: mdi:weight-lifter
   - name: Tise
     latitude: 59.910041
@@ -86,13 +88,33 @@ zone:
     longitude: 10.715197
     radius: 80
     icon: mdi:subway-variant
-
+  - name: home
+    latitude: 59.927383
+    longitude: 10.715456
+    icon: mdi:home
+    radius: 160
 
 shopping_list:
+
+recorder:
+  auto_purge: true
+  purge_keep_days: 7
+  exclude:
+    entities:
+      - sensor.date
+      - sensor.time
+      - sensor.sun_azimuth
+      - sensor.sun_elevation
+      - sun.sun
+
+weather:
+  - platform: openweathermap
+    api_key: !secret openweather_key
+    mode: hourly
 
 device_tracker:
   - platform: mqtt
     devices:
-      mxh8: 'monitor/rpidashboard/mxh8/device_tracker'
+      mxh11: 'monitor/rpidashboard/mxh11/device_tracker'
       dahlmo: 'monitor/rpidashboard/dahlmo/device_tracker'
       living_room_tv: 'monitor/rpidashboard/samsungtv/device_tracker'
