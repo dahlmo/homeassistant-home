@@ -9,6 +9,7 @@
 !/img/
 !/img/*.png
 !/.storage/lovelace
+!/custom_components/
 
 # Ignore folders.
 .cloud
