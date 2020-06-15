@@ -9,6 +9,15 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "sensor.plant1_temperature",
+                                    "name": "Temperatur"
+                                },
+                                {
+                                    "entity": "sensor.plant1_moisture",
+                                    "icon": "mdi:sprout",
+                                    "name": "Monstera"
+                                },
+                                {
                                     "entity": "light.bordlampe_lesekrok",
                                     "name": "Lesekrok"
                                 },
@@ -38,6 +47,15 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "sensor.plant3_temperature",
+                                    "name": "Temperatur"
+                                },
+                                {
+                                    "entity": "sensor.plant3_moisture",
+                                    "icon": "mdi:flower",
+                                    "name": "Plantefuktighet"
+                                },
+                                {
                                     "entity": "light.vegglys_spisestue"
                                 },
                                 {
@@ -65,7 +83,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.bathroom_ceiling",
+                                    "entity": "switch.thermofloor_as_heatit_z_dim_switch",
                                     "name": "Downlights"
                                 },
                                 {
@@ -87,6 +105,16 @@
                                         "volume": false
                                     },
                                     "type": "custom:mini-media-player"
+                                },
+                                {
+                                    "entity": "sensor.washer_state",
+                                    "icon": "mdi:washing-machine",
+                                    "name": "Vask-/T\u00f8rk"
+                                },
+                                {
+                                    "entity": "sensor.washer_remain_time",
+                                    "icon": "mdi:washing-machine",
+                                    "name": "Gjenv\u00e6rende tid"
                                 }
                             ],
                             "icon": "mdi:shower",
@@ -158,14 +186,11 @@
                                     "entity": "person.girlfriend"
                                 },
                                 {
-                                    "entity": "lock.leilighetsdor"
-                                },
-                                {
                                     "entity": "vacuum.xiaomi_vacuum_cleaner",
                                     "name": "Vaskerobot"
                                 },
                                 {
-                                    "entity": "sensor.electricity_price_home",
+                                    "entity": "sensor.electricity_price_majorstuveien_32a",
                                     "name": "Str\u00f8mpris n\u00e5"
                                 },
                                 {
@@ -173,6 +198,21 @@
                                     "name": "Prisniv\u00e5 str\u00f8m"
                                 }
                             ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fibaro_system_fgsd002_smoke_sensor_temperature",
+                                    "name": "Temperatur"
+                                },
+                                {
+                                    "entity": "lock.leilighetsdor",
+                                    "name": "Leilighetsd\u00f8r"
+                                }
+                            ],
+                            "icon": "mdi:door",
+                            "title": "Gang",
                             "type": "entities"
                         },
                         {
@@ -192,6 +232,10 @@
                                 {
                                     "entity": "cover.tradfri_blind",
                                     "name": "Rullegardin"
+                                },
+                                {
+                                    "entity": "media_player.hovedsoverom",
+                                    "name": "Vekkerklokke"
                                 }
                             ],
                             "icon": "mdi:sleep",
@@ -199,7 +243,7 @@
                             "type": "entities"
                         },
                         {
-                            "entity": "weather.home",
+                            "entity": "weather.openweathermap",
                             "type": "weather-forecast"
                         },
                         {
@@ -213,6 +257,13 @@
                                     "name": "Verisure tilkoblet",
                                     "state_filter": [
                                         "off"
+                                    ]
+                                },
+                                {
+                                    "entity": "binary_sensor.washer_error_state",
+                                    "name": "Feilmelding vaskemaskin",
+                                    "state_filter": [
+                                        "on"
                                     ]
                                 },
                                 {
@@ -245,19 +296,6 @@
                                 }
                             ],
                             "type": "entity-filter"
-                        },
-                        {
-                            "dark_mode": false,
-                            "default_zoom": 16,
-                            "entities": [
-                                {
-                                    "entity": "device_tracker.e_golf"
-                                }
-                            ],
-                            "geo_location_sources": [],
-                            "hours_to_show": 24,
-                            "title": "E-Golf lokasjon",
-                            "type": "map"
                         }
                     ],
                     "icon": "mdi:home",
@@ -379,11 +417,64 @@
                                 },
                                 {
                                     "entity": "sensor.bathroom_heating_kw"
+                                },
+                                {
+                                    "entity": "sensor.sun_azimuth"
+                                },
+                                {
+                                    "entity": "sensor.tv_hours"
+                                },
+                                {
+                                    "entity": "sensor.plant1_battery"
+                                },
+                                {
+                                    "entity": "sensor.plant2_battery"
+                                },
+                                {
+                                    "entity": "sensor.plant3_battery"
                                 }
                             ],
                             "show_header_toggle": false,
                             "title": "Z-Wave",
                             "type": "entities"
+                        },
+                        {
+                            "calibration_points": [
+                                {
+                                    "map": {
+                                        "x": 836,
+                                        "y": 47
+                                    },
+                                    "vacuum": {
+                                        "x": 26200,
+                                        "y": 36200
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 39,
+                                        "y": 1213
+                                    },
+                                    "vacuum": {
+                                        "x": 18200,
+                                        "y": 24500
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 77,
+                                        "y": 244
+                                    },
+                                    "vacuum": {
+                                        "x": 18500,
+                                        "y": 24400
+                                    }
+                                }
+                            ],
+                            "debug": false,
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "map_image": "/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi.png",
+                            "type": "custom:xiaomi-vacuum-map-card"
                         },
                         {
                             "entities": [
@@ -402,74 +493,6 @@
                             ],
                             "title": "Corona i Norge",
                             "type": "glance"
-                        },
-                        {
-                            "calibration_points": [
-                                {
-                                    "map": {
-                                        "x": 140,
-                                        "y": 740
-                                    },
-                                    "vacuum": {
-                                        "x": 25500,
-                                        "y": 25500
-                                    }
-                                },
-                                {
-                                    "map": {
-                                        "x": 952,
-                                        "y": 692
-                                    },
-                                    "vacuum": {
-                                        "x": 32900,
-                                        "y": 25900
-                                    }
-                                },
-                                {
-                                    "map": {
-                                        "x": 565,
-                                        "y": 358
-                                    },
-                                    "vacuum": {
-                                        "x": 29500,
-                                        "y": 28900
-                                    }
-                                }
-                            ],
-                            "debug": false,
-                            "default_mode": "predefined_zones",
-                            "entity": "vacuum.xiaomi_vacuum_cleaner",
-                            "map_image": "/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi.png",
-                            "type": "custom:xiaomi-vacuum-map-card",
-                            "zones": [
-                                [
-                                    [
-                                        31089,
-                                        27595,
-                                        34575,
-                                        29444,
-                                        1
-                                    ]
-                                ],
-                                [
-                                    [
-                                        33020,
-                                        29422,
-                                        35688,
-                                        31921,
-                                        1
-                                    ]
-                                ],
-                                [
-                                    [
-                                        26704,
-                                        25906,
-                                        28992,
-                                        26943,
-                                        1
-                                    ]
-                                ]
-                            ]
                         }
                     ],
                     "icon": "mdi:wrench",
